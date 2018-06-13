@@ -36,15 +36,15 @@ RUN yum update -y                           && \
       tk-devel              \
       tkinter               \
       unzip                 \
+      file                  \
       wget                  \
       which               &&\
-      yum install -y centos-release-scl-rh && \
-      yum install -y --setopt=tsflags=nodocs  \
-        devtoolset-6-gcc                      \
-        devtoolset-6-gcc-c++                  \
-        devtoolset-6-gcc-gfortran             \
-        devtoolset-6-gdb                   
- 
+    yum install -y centos-release-scl-rh && \
+    yum install -y --setopt=tsflags=nodocs  \
+      devtoolset-6-gcc                      \
+      devtoolset-6-gcc-c++                  \
+      devtoolset-6-gcc-gfortran             \
+      devtoolset-6-gdb                   
 
 # Setup LCGCMake
 RUN mkdir -p $LCGCMAKE_ROOT  && \
@@ -62,6 +62,7 @@ RUN useradd hsf
 
 ENV USER=hsf
 ENV HOME=/home/hsf
+ENV SHELL=/bin/bash
 WORKDIR /home/hsf
 
 # Alias for cmake
