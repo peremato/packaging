@@ -37,6 +37,7 @@ RUN yum update -y                           && \
       tkinter               \
       unzip                 \
       file                  \
+      patch                 \
       wget                  \
       which               &&\
     yum install -y centos-release-scl-rh && \
