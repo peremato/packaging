@@ -28,7 +28,7 @@ RUN yum update -y                           && \
       libXpm-devel          \
       mesa-libGL-devel      \
       mesa-libGLU-devel     \
-      openmotif-devel       \
+      motif-devel           \
       openssl-devel         \
       readline              \
       readline-devel        \
