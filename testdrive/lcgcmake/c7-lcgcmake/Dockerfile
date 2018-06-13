@@ -22,7 +22,6 @@ RUN yum update -y                           && \
       gdbm-devel            \
       git                   \
       glibc-devel           \
-      HEP_OSlibs            \
       libcurl-devel         \
       libuuid-devel         \
       libXmu-devel          \
