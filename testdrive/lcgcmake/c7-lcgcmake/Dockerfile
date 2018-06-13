@@ -39,7 +39,15 @@ RUN yum update -y                           && \
       tkinter               \
       unzip                 \
       wget                  \
-      which
+      which               &&\
+      yum install -y centos-release-scl-rh && \
+      yum install -y --setopt=tsflags=nodocs  \
+        llvm-toolset-7                        \
+        devtoolset-6-gcc                      \
+        devtoolset-6-gcc-c++                  \
+        devtoolset-6-gcc-gfortran             \
+        devtoolset-6-gdb                   
+ 
 
 # Setup LCGCMake
 RUN mkdir -p $LCGCMAKE_ROOT  && \
