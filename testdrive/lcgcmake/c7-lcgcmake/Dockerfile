@@ -10,7 +10,6 @@ ENV LCGCMAKE_ROOT=/build/lcgcmake            \
 RUN yum update -y                           && \
     yum install -y epel-release             && \
     yum update -y                           && \
-    yum groupinstall -y "Development Tools" && \
     yum install -y          \
       autoconf              \
       automake              \
@@ -42,7 +41,6 @@ RUN yum update -y                           && \
       which               &&\
       yum install -y centos-release-scl-rh && \
       yum install -y --setopt=tsflags=nodocs  \
-        llvm-toolset-7                        \
         devtoolset-6-gcc                      \
         devtoolset-6-gcc-c++                  \
         devtoolset-6-gcc-gfortran             \
